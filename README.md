@@ -1,12 +1,12 @@
 # NetWindowsFirewall
 
-NetWindowsFirewall é uma micro biblioetca com métodos auxiliares para gerenciar o Firewall do Windows.
+NetWindowsFirewall Ã© uma micro biblioetca com mÃ©todos auxiliares para gerenciar o Firewall do Windows.
 
 # Autores
 
-- [**KempDec**](https://github.com/kempdec) - Mantedora do projeto de código aberto.
-- [**Vinícius Lima**](https://github.com/viniciusxdl) - Desenvolvedor .NET C#.
+- [**KempDec**](https://github.com/kempdec) - Mantedora do projeto de cÃ³digo aberto.
+- [**VinÃ­cius Lima**](https://github.com/viniciusxdl) - Desenvolvedor .NET C#.
 
-# Licença
+# LicenÃ§a
 
 [MIT](https://github.com/kempdec/NetWindowsFirewall/blob/main/LICENSE)
