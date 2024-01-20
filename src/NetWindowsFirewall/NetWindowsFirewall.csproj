@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>KempDec.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>KempDec.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>NetWindowsFirewall</Title>
+    <Version>1.0.0</Version>
+    <Authors>KempDec</Authors>
+    <Company>KempDec Brasil Ltda.</Company>
+    <Product>NetWindowsFirewall</Product>
+    <Description>NetWindowsFirewall é uma micro biblioetca com métodos auxiliares para gerenciar o Firewall do Windows.</Description>
+    <Copyright>2024 © KempDec Brasil Ltda.</Copyright>
+    <PackageProjectUrl>https://github.com/kempdec/NetWindowsFirewall</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/kempdec/NetWindowsFirewall</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>windows firewall;windows;firewall;helper;</PackageTags>
+    <PackageOutputPath>..\..\published</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
