@@ -6,10 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{9A6FB7DD-3142-48D1-A7A3-F4B1F532EEFB}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetWindowsFirewall", "src\NetWindowsFirewall\NetWindowsFirewall.csproj", "{AF6C76AA-D9D7-47AB-95CC-9B9687B84D42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetWindowsFirewall", "src\NetWindowsFirewall\NetWindowsFirewall.csproj", "{AF6C76AA-D9D7-47AB-95CC-9B9687B84D42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
