@@ -6,6 +6,9 @@ var ipAddress = IPAddress.Parse("127.0.0.1");
 // Exemplo com a instância estática de NetWindowsFirewall:
 // -----------------------------------------------------------------------------------------------------
 
+// Adiciona uma regra de bloqueio (de entrada e saída) para o endereço de IP "127.0.1" no Firewall do Windows.
+NetWindowsFirewall.Instance.AddBlockIpRule($"IP {ipAddress} bloqueado", ipAddress);
+
 // Adiciona uma regra de bloqueio (de entrada) para o endereço de IP "127.0.1" no Firewall do Windows.
 NetWindowsFirewall.Instance.AddBlockInIpRule($"IP {ipAddress} bloqueado", ipAddress);
 
@@ -16,6 +19,9 @@ NetWindowsFirewall.Instance.AddBlockOutIpRule($"IP {ipAddress} bloqueado", ipAdd
 // -----------------------------------------------------------------------------------------------------
 
 var netWindowsFirewall = new NetWindowsFirewall();
+
+// Adiciona uma regra de bloqueio (de entrada e saída) para o endereço de IP "127.0.1" no Firewall do Windows.
+netWindowsFirewall.AddBlockIpRule($"IP {ipAddress} bloqueado", ipAddress);
 
 // Adiciona uma regra de bloqueio (de entrada) para o endereço de IP "127.0.1" no Firewall do Windows.
 netWindowsFirewall.AddBlockInIpRule($"IP {ipAddress} bloqueado", ipAddress);

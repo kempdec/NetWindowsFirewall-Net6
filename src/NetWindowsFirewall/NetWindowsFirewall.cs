@@ -48,6 +48,17 @@ public class NetWindowsFirewall
         AddIpRule(name, ipAddress, NET_FW_ACTION_.NET_FW_ACTION_BLOCK, NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN);
 
     /// <summary>
+    /// Adiciona uma nova regra de bloqueio (de entrada e saída) para um endereço de IP no Firewall do Windows.
+    /// </summary>
+    /// <param name="name">O nome da regra de bloqueio a ser adicionada.</param>
+    /// <param name="ipAddress">O endereço de IP que será bloqueado na regra de bloqueio a ser adicionada.</param>
+    public void AddBlockIpRule(string name, IPAddress ipAddress)
+    {
+        AddBlockInIpRule(name, ipAddress);
+        AddBlockOutIpRule(name, ipAddress);
+    }
+
+    /// <summary>
     /// Adiciona uma nova regra de bloqueio para um endereço de IP no Firewall do Windows.
     /// </summary>
     /// <param name="name">O nome da regra de bloqueio a ser adicionada.</param>
