@@ -4,7 +4,7 @@ NetWindowsFirewall é uma micro biblioetca com métodos auxiliares para gerencia
 
 A biblioteca COM `NetFwTypeLib` é usada para gerenciar o Firewall do Windows pelo **NetWindowsFirewall**.
 
-[**Veja NetWindowsFirewall para .NET Framework 4.8**](https://github.com/kempdec/NetWindowsFirewall-Legacy)
+[**Veja NetWindowsFirewall Legacy para .NET Framework 4.8**](https://github.com/kempdec/NetWindowsFirewall-Legacy)
 
 ## Instalação
 
