@@ -54,6 +54,51 @@ netWindowsFirewall.AddBlockInIpRule($"IP {ipAddress} bloqueado", ipAddress);
 netWindowsFirewall.AddBlockOutIpRule($"IP {ipAddress} bloqueado", ipAddress);
 ```
 
+## Métodos disponíveis
+
+Os métodos disponíveis são:
+
+``` csharp
+// Adiciona uma nova regra de permissão (de entrada) para um endereço de IP no Firewall do Windows.
+public void AddAllowInIpRule(string name, IPAddress ipAddress);
+
+// Adiciona uma nova regra de permissão (de entrada e saída) para um endereço de IP no Firewall do Windows.
+public void AddAllowIpRule(string name, IPAddress ipAddress);
+
+// Adiciona uma nova regra de permissão para um endereço de IP no Firewall do Windows.
+public void AddAllowIpRule(string name, IPAddress ipAddress, NET_FW_RULE_DIRECTION_ direction);
+
+// Adiciona uma nova regra de permissão (de saída) para um endereço de IP no Firewall do Windows.
+public void AddAllowOutIpRule(string name, IPAddress ipAddress);
+
+// Adiciona uma nova regra de bloqueio (de entrada) para um endereço de IP no Firewall do Windows.
+public void AddBlockInIpRule(string name, IPAddress ipAddress);
+
+// Adiciona uma nova regra de bloqueio (de entrada e saída) para um endereço de IP no Firewall do Windows.
+public void AddBlockIpRule(string name, IPAddress ipAddress);
+
+// Adiciona uma nova regra de bloqueio para um endereço de IP no Firewall do Windows.
+public void AddBlockIpRule(string name, IPAddress ipAddress, NET_FW_RULE_DIRECTION_ direction);
+
+// Adiciona uma nova regra de bloqueio (de saída) para um endereço de IP no Firewall do Windows.
+public void AddBlockOutIpRule(string name, IPAddress ipAddress);
+
+// Adiciona a regra especificada para o Firewall do Windows.
+public void AddRule(INetFwRule rule);
+
+// Obtém uma nova regra do Firewall do Windows.
+public static INetFwRule GetNewRule();
+
+// Obtém as regras do Firewall do Windows.
+public static INetFwRules GetRules();
+
+// Adiciona o endereço de IP especificado para a regra especificada.
+public static void AddIpToRule(string ruleName, IPAddress ipAddress);
+
+// Remove o endereço de IP especificado para a regra especificada.
+public static void RemoveIpToRule(string ruleName, IPAddress ipAddress);
+```
+
 ## Colaboração
 
 Ajude-nos a deixar a biblioteca de código aberto cada vez melhor, criando um **pull request**.
