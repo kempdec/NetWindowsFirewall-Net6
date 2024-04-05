@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "src/**"
+      - "packages/**"
 
   workflow_dispatch:
     inputs:
@@ -45,7 +45,7 @@ jobs:
   publish:
     name: Publicar pacote
     needs: release
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do repositório
@@ -55,13 +55,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-
-      - name: Restaurar dependências
-        run: dotnet restore
-
-      - name: Gerar pacote
-        run: dotnet pack -p:PackageVersion=${{ needs.release.outputs.version }}
-
+          
       - name: Carregar o pacote no NuGet
         run: |
           cd published/

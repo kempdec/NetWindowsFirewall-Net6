@@ -75,7 +75,8 @@
     // Os inícios das mensagens de commit que serão ignoradas.
     "Ignores": [
       "Refatorar.",
-      "Merge"
+      "Merge",
+      "Atualizar a versão do pacote."
     ]
   }
 }
