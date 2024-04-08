@@ -179,7 +179,10 @@ public class NetWindowsFirewall
     /// </summary>
     /// <param name="ruleName">O nome da regra ao qual o endereço de IP será adicionado.</param>
     /// <param name="ipAddress">O endereço de IP a ser adicionado.</param>
-    public static void AddIpToRule(string ruleName, IPAddress ipAddress)
+    /// <returns>Um sinalizador indicando se o endereço de IP especificado foi adicionado para a regra
+    /// especificada. Quando o sinalizador é <see langword="false"/> indica que a regra não existe no
+    /// Firewall.</returns>
+    public static bool AddIpToRule(string ruleName, IPAddress ipAddress)
     {
         INetFwRules rules = GetRules();
 
@@ -191,7 +194,11 @@ public class NetWindowsFirewall
             }
 
             rule.RemoteAddresses += $",{ipAddress}";
+
+            return true;
         }
+
+        return false;
     }
 
     /// <summary>
@@ -199,7 +206,10 @@ public class NetWindowsFirewall
     /// </summary>
     /// <param name="ruleName">O nome da regra ao qual o endereço de IP será removido.</param>
     /// <param name="ipAddress">O endereço de IP a ser removido.</param>
-    public static void RemoveIpToRule(string ruleName, IPAddress ipAddress)
+    /// <returns>Um sinalizador indicando se o endereço de IP especificado foi removido da regra
+    /// especificada. Quando o sinalizador é <see langword="false"/> indica que a regra não existe no
+    /// Firewall.</returns>
+    public static bool RemoveIpToRule(string ruleName, IPAddress ipAddress)
     {
         INetFwRules rules = GetRules();
 
@@ -215,6 +225,10 @@ public class NetWindowsFirewall
             ips.RemoveAll(e => e.Contains(ipAddress.ToString()));
 
             rule.RemoteAddresses = string.Join(',', ips);
+
+            return true;
         }
+
+        return false;
     }
 }
