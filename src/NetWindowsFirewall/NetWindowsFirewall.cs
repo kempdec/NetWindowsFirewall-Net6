@@ -158,7 +158,7 @@ public class NetWindowsFirewall
         if (!string.IsNullOrWhiteSpace(remotePorts))
         {
             rule.Protocol = (int)NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP;
-            rule.RemotePorts = remotePorts;
+            rule.LocalPorts = remotePorts;
         }
 
         AddRule(rule);
