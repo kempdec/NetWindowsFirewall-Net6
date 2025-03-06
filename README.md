@@ -24,9 +24,9 @@ Para alterar por código, abra o arquivo com extensão `.csproj` do seu projeto 
 framework, dentro da tag `<TargetFramework/>`. Exemplo:
   ``` xml
   <!-- Antes. -->
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net6.0</TargetFramework>
   <!-- Depois. -->
-  <TargetFramework>net8.0-windows</TargetFramework>
+  <TargetFramework>net6.0-windows</TargetFramework>
   ```
 
 ## Como usar
